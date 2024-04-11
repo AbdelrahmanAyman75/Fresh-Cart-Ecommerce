@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black !important;
+    text-decoration: none !important;
+}
+.a , .a:hover{
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+.product .btn 
+{
+    transition: transform .5s , opacity .5s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+
+
+.loader {
+    width: 50px;
+    height: 165px;
+    position: relative;
+  }
+  .loader::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50% , 0);
+    width: 16px;
+    height: 16px;
+    background: #FF3D00;
+    border-radius: 50%;
+    animation: bounce 2s linear infinite;
+  }
+
+  .loader::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 48px;
+    width: 48px;
+    background: #fff;
+    border-radius: 4px;
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes bounce {
+    0% , 50% , 100%{
+    transform: translate(-50%, 0px);
+    height: 20px;
+    }
+    20% {
+      transform: translate(-25%, 85px);
+      height: 28px;
+    }
+    25% {
+      transform: translate(-25%, 110px);
+      height: 12px;
+    }
+    70% {
+      transform: translate(-75%, 85px);
+      height: 28px;
+    }
+    75% {
+      transform: translate(-75%, 108px);
+      height: 12px;
+    }
+  }
+  @keyframes rotate {
+    0% , 50% , 100%{ transform: rotate(0deg)}
+    25% { transform: rotate(90deg)}
+    75%{ transform: rotate(-90deg)}
+  }
+    
