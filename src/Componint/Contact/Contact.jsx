@@ -81,7 +81,7 @@ export default function Contact() {
       try {
         let {data} = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signup",values)
       
-        if(data.message =="success"){
+        if(data.message ==="success"){
           navigat('/Login')
           
         }

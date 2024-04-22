@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Fade } from "react-awesome-reveal";
 
 export default function Brands() {
   const [isloding ,setisloding] =useState({})
@@ -22,7 +23,7 @@ export default function Brands() {
  },[])
   return (
     <>
-   
+  
    {isloding ? (
   <div className='d-flex justify-content-center align-items-center my-5 py-5'>
     <i className='fas fa-spin fa-spinner fa-2x'></i>
@@ -30,6 +31,7 @@ export default function Brands() {
 ) : (
   <>
     <h1 className='text-main text-center fw-bold mt-5'>All prands</h1>
+      <Fade> 
     <div className="row">
       {brands?.data?.map((el, indx) => (
         <div className="col-md-3" key={indx}>
@@ -40,6 +42,9 @@ export default function Brands() {
         </div>
       ))}
     </div>
+      </Fade>
+    
+    
   </>
 )}
 

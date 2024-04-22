@@ -25,7 +25,7 @@ console.log(data?.data.data);
      
       {isLoading?
     <div className='w-100 h-100 bg-dark position-absolute top-0 bottom-0 end-0 start-0 '>
-      <span className="loader d-flex justify-content-center align-items-center w-100 mt-5 m-auto  "></span>
+      <span className="loader d-flex justify-content-center align-items-center w-100 h-50  "></span>
       </div>
     
   :

@@ -65,23 +65,22 @@ export default function Navbar() {
                 orders
                 </Link>
               </li>
+
+              <Link to={"/Cart"}>
+              <div className="me-auto w-100">
+              <i className="fa-solid fa-cart-shopping text-main mt-2   position-relative   ">
+                <span className="position-absolute top-0 end-0 translate-middle-y cursor-pointer  text-dark fs-6 ">
+                  {numOfCartItems || 0}
+                </span>
+              </i>
+              </div>
+              </Link>
+
             </ul>
           )}
 
           <div className="ms-auto d-flex justify-content-center align-items-center ">
             <li className="nav-item ms-auto list-unstyled ">
-              <i class=""></i>
-
-              <Link to={"/Cart"}>
-              <i className="fa-solid fa-cart-shopping text-main  position-relative   ">
-                <span className="position-absolute top-0 end-0 translate-middle-y cursor-pointer  text-dark fs-6 ">
-                  {numOfCartItems || 0}
-                  
-                </span>
-              
-              </i>
-              </Link>
-
               <i className="fa-brands mx-2 fa-facebook "></i>
               <i className="fa-brands mx-2 fa-instagram "></i>
               <i className="fa-brands mx-2 fa-linkedin "></i>

@@ -11,9 +11,6 @@ import { authcontext } from "../../Context/AuthContext";
 export default function Login() {
 
 
-
-
-
   const navigate = useNavigate()
 
   const {setuserislogin,userislogin} = useContext(authcontext)

@@ -3,9 +3,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import SliderCom from "../SliderCom/SliderCom";
 import axios from "axios";
-import { Bounce, toast } from "react-toastify";
+import { Bounce, Flip, toast } from "react-toastify";
 import { CartContext  } from "../../Context/CartContext";
 import { CWashListContext } from "../../Context/CartwashContext/CartwashContext";
+import { Fade } from "react-awesome-reveal";
 
 function ChaildP({ product }) {
 
@@ -41,7 +42,7 @@ function ChaildP({ product }) {
       setnumOfCartItems(data.numOfCartItems);
        
     }
-    console.log(data.numOfCartItems);
+    // console.log(data.numOfCartItems);
   }
 
   async function Addwishlist(id){
@@ -63,6 +64,8 @@ function ChaildP({ product }) {
   }
   return (
     <>
+    <Fade >
+
       <div className="product overflow-hidden px-2 py-3 cursor-pointer ">
         <Link to={"/ProductDetails/" + product.id} className="a">
           <img src={product.imageCover} className="w-100" alt="" />
@@ -89,6 +92,8 @@ function ChaildP({ product }) {
         
       
       </div>
+      </Fade >
+
     </>
   );
 }
