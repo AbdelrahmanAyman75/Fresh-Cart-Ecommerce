@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useFormik} from "formik";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as yup from 'yup';
 
 
@@ -98,7 +98,7 @@ export default function Contact() {
 
   return (
     <>
-      <h1>Register........</h1>
+      <h1 className="mt-5">Register........</h1>
       <form onSubmit={form1.handleSubmit}>
         <label htmlFor="name">Name</label>
 
@@ -165,6 +165,9 @@ export default function Contact() {
         // eslint-disable-next-line no-mixed-operators
         : <button disabled={!(form1.isValid || form1.isloding && form1.dirty)} type="submit" className="btn btn-success mt-2">Register</button>
 }
+<Link to={'/Login'}>
+  <p className="mt-2 text-blue a ">Login...! </p>
+  </Link>
 
       </form>
     </>

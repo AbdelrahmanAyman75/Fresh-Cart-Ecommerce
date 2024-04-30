@@ -60,7 +60,7 @@ export default function Login() {
 
   return (
     <>
-      <h1>Login........</h1>
+      <h1 className="mt-5" >Login........</h1>
 
       <form onSubmit={form1.handleSubmit}>
 
@@ -99,6 +99,11 @@ export default function Login() {
 <Link to={'/forgotPasswords'}>
   <p className="mt-2">Forget password..? </p>
   </Link>
+
+  <Link to={'/Contact'}>
+  <p className="mt-2 text-blue">Register...! </p>
+  </Link>
+
 
       </form>
     </>

@@ -24,10 +24,14 @@ export default function Navbar() {
   return (
     
     <>
+      <div className="row">
+        <div className="col-md-6">
+      <div className="container-fluid">
       <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary position-fixed fixed-top  ">
         <Link className="navbar-brand" to="Home">
           <img src={logo} alt="freshcart-logo" />
         </Link>
+        
 
         <div className="collapse navbar-collapse " id="navbarNav">
           {userislogin && (
@@ -111,7 +115,12 @@ export default function Navbar() {
             </>
           )}
         </div>
+        
       </nav>
+      </div>
+        </div>
+
+      </div>
     </>
   );
 }
